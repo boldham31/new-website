@@ -3,36 +3,70 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 35%;
+  width: 35%;
+  border-radius: 100%;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h1, h2 {
+  margin: 0;
+  color: darkslateblue;
+}
+
+header h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:grey;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background-color: #f4f4f4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.schwabLogo {
+  padding-top: 20px;
+}
+
+.schwabLogo img {
+  width: 130px;
+  border-radius: 100%;
+}
+
+.card-container Card {
+  width: 500px;
+}
+
+.MuiCard-root {
+  width: 750px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.work-container {
+  display: flex;
+  justify-content: center;
+}
+
+.work-container .rightButton, .leftButton {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  height: 75px;
 }
