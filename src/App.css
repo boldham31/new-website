@@ -80,7 +80,8 @@ body {
 }
 
 .MuiCard-root {
-  width: 750px;
+  width: 700px;
+  height: 425px;
   margin-right: 25px;
   margin-left: 25px;
   margin-top: 20px;
@@ -193,11 +194,11 @@ body {
 }
 
 .rightButton {
-  margin-left: 25px;
+  margin-left: 375px;
 }
 
 .leftButton {
-  margin-right: 25px;
+  margin-right: 375px;
 }
 
 .MuiFab-primary {
@@ -211,6 +212,13 @@ body {
 .MuiDivider-middle {
   margin-top: 16px!important;
   margin-bottom: 12px!important;
+}
+
+.footer {
+  height: 465px!important;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .chipSection {
