@@ -92,7 +92,7 @@ body {
   display: block;
   overflow-x: hidden;
   position: absolute;
-  left: 30%
+  left: 0%
 }
 
 .card-2 {
@@ -117,7 +117,7 @@ body {
 }
 
 #card-1 {
-  left: 150px;
+  left: 50px;
   transition: 1s;
 }
 
