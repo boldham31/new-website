@@ -13,23 +13,37 @@ import { Paper, Button } from '@mui/material';
 function App() {
   var items = [
     {
-        companyName: "Charles Schwab",
-        role: "Front End Developer",
-        technologies: ["Angular 2+", "Node.js", "HTML/CSS", "JavaScript (TypeScript)", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
-        logo: "./schwab-logo.jpg",
-        description: "As a member of an Agile development team, I was a front-end developer working with my team to build out a web application within the Retail Web Technologies department."
+      companyName: "Amazon",
+      role: "Senior Software Engineer",
+      technologies: ["React", "Node.js", "JavaScript (TypeScript)", "Java w/Kotlin", "GraphQL", "AWS Serverless", "AWS DynamoDB", "AWS Lambdas" ],
+      logo: "./amazon_logo.jpeg",
+      description: "Senior Software Engineer on an internal Safety and Auditing product for Amazon AUSTIN. We are utilizing the entire AWS cloud stack to deliver a market leading compliance product."
     },
     {
-      companyName: "Texas Conference of Urban Counties",
-      role: "Front End Developer",
-      technologies: ["Angular 4", "Node.js", "Angular Material", "JavaScript (TypeScript)", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
-      logo: "./cuc-logo.jpg",
-      description: "Lead front-end developer on a multi-million dollar software implementation for a government agency. Responsible for application UI/UX design and managing four offshore development teams."
+      companyName: "BP",
+      role: "Full-Stack Developer",
+      technologies: ["Angular 11", "Node.js", "JavaScript (TypeScript)", "MySQL", "Azure Cloud Stack", ".NET Core" ],
+      logo: "./bp_logo.png",
+      description: "Senior Full Stack Developer on an internal Data Portal & Visualization project for a Fortune 500 oil and gas client. I worked across multiple teams to deliver both front end and back end solutions."
+    },
+    {
+      companyName: "Verizon",
+      role: "Full-Stack Developer",
+      technologies: ["React w/Redux", "HTML5/CSS3", "Node.js", "JavaScript (TypeScript)", "MySQL"],
+      logo: "./verizon_logo.png",
+      description: "One of two Full Stack Developers on an Onboarding Portal / Data Analytics enhancement project that delivered exceptional internal metrics for business stakeholders."
+    },
+    {
+      companyName: "Q2 eBanking",
+      role: "Full-Stack Developer",
+      technologies: ["Java w/Spring Boot", "Node.js", "JavaScript (TypeScript)", "MySQL", "Atlassian Products (Jira/Confluence)"],
+      logo: "./q2_logo.png",
+      description: "Full-Stack Developer working on a financial services client delivering core, account opening and multiple other software applications within the banking space."
     },
     {
       companyName: "General Motors",
       role: "Full-Stack & Mobile Developer",
-      technologies: ["Angular 5, 6, 7 and 8", "Node.js", "React Native (iOS/Android)", "NativeScript (iOS/Android", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
+      technologies: ["Angular 5, 6, 7 and 8", "Node.js", "React Native (iOS/Android)", "NativeScript (iOS/Android", "Java w/Spring Boot"],
       logo: "./gm_logo.png",
       description: "Mobile & Full-Stack developer on a Maven team project delivering Native POC implementations of existing Angular applications within the product suite."
     },
@@ -39,7 +53,14 @@ function App() {
       technologies: ["Angular 4", "Node.js", "Angular Material", "JavaScript (TypeScript)", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
       logo: "./cuc-logo.jpg",
       description: "Lead front-end developer on a multi-million dollar software implementation for a government agency. Responsible for application UI/UX design and managing four offshore development teams."
-    }
+    },
+    {
+      companyName: "Charles Schwab",
+      role: "Front End Developer",
+      technologies: ["Angular 2+", "Node.js", "HTML/CSS", "JavaScript (TypeScript)", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
+      logo: "./schwab-logo.jpg",
+      description: "As a member of an Agile development team, I was a front-end developer working with my team to build out a web application within the Retail Web Technologies department."
+  },
   ]
 
   return (
@@ -63,7 +84,6 @@ function App() {
       </div>
       <div className="work-container">
         <Carousel 
-          navButtonsAlwaysVisible={true} 
           animation="slide"
           autoPlay={false}
           interval={4000}
@@ -74,84 +94,6 @@ function App() {
         </Carousel>
       </div>
       {/* <div className="work-container">
-        <div className="card-container">
-          <Card id="card-1" className="card-1">
-            <CardContent>
-              <div className="schwabLogo">
-                <img src="./schwab-logo.jpg" alt="Schwab Logo"/>
-                <div className="textSection">
-                  <Typography variant="h5" component="h2">Front End Developer</Typography>
-                  <Typography variant="h6" component="h4">Charles Schwab</Typography>
-                  <Typography className="description" variant="h7" component="h4">As a member of an Agile development team, I was a front-end developer working with my team to build out a web application within the Retail Web Technologies department</Typography>
-                  <Divider variant="middle" />
-                  <Typography variant="h7" component="h4">Technologies</Typography>
-                  <div className="chipSection">
-                    <Chip label="Angular 2+"  onClick={handleClick} />
-                    <Chip label="Node.js"  onClick={handleClick} />
-                    <Chip label="HTML/CSS"  onClick={handleClick} />
-                    <Chip label="JavaScript (TypeScript)"  onClick={handleClick} />
-                    <Chip label="Agile Scrum"  onClick={handleClick} />
-                    <Chip label="Automated Unit Testing w/Karma, Jasmine"  onClick={handleClick} />
-                    <Chip label="Jenkins CI"  onClick={handleClick} />
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-        <div className="card-container">
-          <Card id="card-2" className="card-2">
-            <CardContent>
-              <div className="schwabLogo">
-                <img src="./cuc-logo.jpg" alt="Schwab Logo"/>
-                <div className="textSection">
-                  <Typography variant="h5" component="h2">Front End Developer</Typography>
-                  <Typography variant="h6" component="h4">Texas Conference of Urban Counties</Typography>
-                  <Typography className="description" variant="h7" component="h4">Lead front-end developer on a multi-million dollar software implementation for a government agency. Responsible for application UI/UX design and managing four offshore development teams.</Typography>
-                  <Divider variant="middle" />
-                  <Typography variant="h7" component="h4">Technologies</Typography>
-                  <div className="chipSection">
-                    <Chip label="Angular 4"  onClick={handleClick} />
-                    <Chip label="Angular Material"  onClick={handleClick} />
-                    <Chip label="Node.js"  onClick={handleClick} />
-                    <Chip label="HTML/CSS"  onClick={handleClick} />
-                    <Chip label="JavaScript (TypeScript)"  onClick={handleClick} />
-                    <Chip label="Agile Scrum"  onClick={handleClick} />
-                    <Chip label="Azure w/Octopus Deploy and TeamCity Configuration"  onClick={handleClick} />
-                    <Chip label="Microsoft SQL Server" onClick={handleClick} />
-                    <Chip label="Octopus Deploy"  onClick={handleClick} />
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-        <div className="card-container">
-          <Card id="card-3" className="card-3">
-            <CardContent>
-              <div className="schwabLogo">
-                <img src="./gm_logo.png" alt="Schwab Logo"/>
-                <div className="textSection">
-                  <Typography variant="h5" component="h2">Full-Stack & Mobile Developer</Typography>
-                  <Typography variant="h6" component="h4">General Motors</Typography>
-                  <Typography className="description" variant="h7" component="h4">Mobile & Full-Stack developer on a Maven team project delivering Native POC implementations of existing Angular applications within the product suite.</Typography>
-                  <Divider variant="middle" />
-                  <Typography variant="h7" component="h4">Technologies</Typography>
-                  <div className="chipSection">
-                  <Chip label="Angular 5, 6, 7 and 8"  onClick={handleClick} />
-                    <Chip label="React Native (iOS/Android)"  onClick={handleClick} />
-                    <Chip label="Nativescript (iOS/Android)"  onClick={handleClick} />
-                    <Chip label="Java w/Spring Boot"  onClick={handleClick} />
-                    <Chip label="JavaScript (TypeScript)"  onClick={handleClick} />
-                    <Chip label="TFS"  onClick={handleClick} />
-                    <Chip label="Jenkins CI"  onClick={handleClick} />
-                    <Chip label="Node.js"  onClick={handleClick} />
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
         <div className="card-container">
           <Card id="card-4" className="card-4">
             <CardContent>
