@@ -7,29 +7,73 @@ import Chip from '@material-ui/core/Chip';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Divider from '@material-ui/core/Divider';
+import Carousel from 'react-material-ui-carousel';
+import { Paper, Button } from '@mui/material';
 
 function App() {
+  var items = [
+    {
+        companyName: "Charles Schwab",
+        role: "Front End Developer",
+        technologies: ["Angular 2+", "Node.js", "HTML/CSS", "JavaScript (TypeScript)", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
+        logo: "./schwab-logo.jpg",
+        description: "As a member of an Agile development team, I was a front-end developer working with my team to build out a web application within the Retail Web Technologies department."
+    },
+    {
+      companyName: "Texas Conference of Urban Counties",
+      role: "Front End Developer",
+      technologies: ["Angular 4", "Node.js", "Angular Material", "JavaScript (TypeScript)", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
+      logo: "./cuc-logo.jpg",
+      description: "Lead front-end developer on a multi-million dollar software implementation for a government agency. Responsible for application UI/UX design and managing four offshore development teams."
+    },
+    {
+      companyName: "Texas Conference of Urban Counties",
+      role: "Front End Developer",
+      technologies: ["Angular 4", "Node.js", "Angular Material", "JavaScript (TypeScript)", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
+      logo: "./cuc-logo.jpg",
+      description: "Lead front-end developer on a multi-million dollar software implementation for a government agency. Responsible for application UI/UX design and managing four offshore development teams."
+    },
+    {
+      companyName: "Texas Conference of Urban Counties",
+      role: "Front End Developer",
+      technologies: ["Angular 4", "Node.js", "Angular Material", "JavaScript (TypeScript)", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
+      logo: "./cuc-logo.jpg",
+      description: "Lead front-end developer on a multi-million dollar software implementation for a government agency. Responsible for application UI/UX design and managing four offshore development teams."
+    }
+  ]
 
   return (
     <div className="App">
       <header className="App-header">
         <Typography variant="h4" component="h2">BRYCE OLDHAM</Typography>
-        <Typography variant="h6" component="h4">Full-Stack Developer | Technical Consultant</Typography>
+        <Typography variant="h6" component="h4">Software Architect | Technical Consultant</Typography>
       </header>
       <div className="image-container">
-          <div className="leftButton">
+          {/* <div className="leftButton">
             <Fab onClick={buttonLeft} color="primary" aria-label="add">
               <ChevronLeftIcon />
             </Fab>
-          </div>
+          </div> */}
           <img src="./mainPhoto.jpg" className="App-logo" alt="main photo" />
-          <div className="rightButton">
+          {/* <div className="rightButton">
             <Fab onClick={buttonRight} color="primary" aria-label="add">
               <ChevronRightIcon />
             </Fab>
-          </div>
+          </div> */}
       </div>
       <div className="work-container">
+        <Carousel 
+          navButtonsAlwaysVisible={true} 
+          animation="slide"
+          autoPlay={false}
+          interval={4000}
+        >
+            {
+                items.map( (item, i) => <Item key={i} item={item} /> )
+            }
+        </Carousel>
+      </div>
+      {/* <div className="work-container">
         <div className="card-container">
           <Card id="card-1" className="card-1">
             <CardContent>
@@ -134,10 +178,32 @@ function App() {
             </CardContent>
           </Card>
         </div>
-      </div>
-      <div className="footer"></div>
+      </div> */}
     </div>
   );
+}
+
+function Item(props)
+{
+    return (
+        <Paper>
+              <div className="schwabLogo">
+                <img src={props.item.logo} alt="Schwab Logo"/>
+                <div className="textSection">
+                  <Typography variant="h5" component="h2">{props.item.role}</Typography>
+                  <Typography variant="h6" component="h4">{props.item.companyName}</Typography>
+                  <Typography className="description" component="h4">{props.item.description}</Typography>
+                  <Divider variant="middle" />
+                  <Typography variant="h6" component="h4">Technologies</Typography>
+                  <div className="chipSection">
+                    {
+                      props.item.technologies.map( (technology, i) => <Chip key={i} label={technology} onClick={handleClick} /> )
+                    }
+                  </div>
+                </div>
+              </div>
+        </Paper>
+    )
 }
 
 function handleClick() {
@@ -152,30 +218,42 @@ function buttonRight() {
   let val = (parseInt(document.getElementById('card-1').style.left, 10) || 150) - 700;
   document.getElementById('card-1').style.transition = '1s';
   document.getElementById('card-1').style.left = val + 'px';
+  console.log("card 1: " + val)
   let val2 = (parseInt(document.getElementById('card-2').style.left, 10) || 1000) - 700;
   document.getElementById('card-2').style.transition = '1s';
   document.getElementById('card-2').style.left = val2 + 'px';
+  console.log("card 2: " + val2)
   let val3 = (parseInt(document.getElementById('card-3').style.left, 10) || 1850) - 700;
   document.getElementById('card-3').style.transition = '1s';
   document.getElementById('card-3').style.left = val3 + 'px';
+  console.log("card 3: " + val3)
   let val4 = (parseInt(document.getElementById('card-4').style.left, 10) || 2700) - 700;
   document.getElementById('card-4').style.transition = '1s';
   document.getElementById('card-4').style.left = val4 + 'px';
+  console.log("card 4: " + val4)
 }
 
 function buttonLeft() {
   let val = (parseInt(document.getElementById('card-1').style.left, 10) || 150) + 700;
   document.getElementById('card-1').style.transition = '1s';
   document.getElementById('card-1').style.left = val + 'px';
+  console.log("card 1: " + val)
   let val2 = (parseInt(document.getElementById('card-2').style.left, 10) || 1000) + 700;
   document.getElementById('card-2').style.transition = '1s';
   document.getElementById('card-2').style.left = val2 + 'px';
+  console.log("card 2: " + val2)
   let val3 = (parseInt(document.getElementById('card-3').style.left, 10) || 1850) + 700;
   document.getElementById('card-3').style.transition = '1s';
   document.getElementById('card-3').style.left = val3 + 'px';
+  console.log("card 3: " + val3)
   let val4 = (parseInt(document.getElementById('card-4').style.left, 10) || 2700) + 700;
   document.getElementById('card-4').style.transition = '1s';
   document.getElementById('card-4').style.left = val4 + 'px';
+  console.log("card 4: " + val4)
+}
+
+function generateCardPosition() {
+
 }
 
 export default App;

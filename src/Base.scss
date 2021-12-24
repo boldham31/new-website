@@ -1,4 +1,6 @@
-$card-half: 350px;
+$card-half: 375px;
+$end-position: 100vw;
+$start-position: 0vw;
 
 .App {
     text-align: center;
@@ -17,6 +19,10 @@ $card-half: 350px;
   header h1, h2 {
     margin: 0;
     color: royalblue;
+  }
+
+  .App-header h2, .App-header h4 {
+      color: white!important;
   }
   
   @keyframes mymove {
@@ -53,8 +59,8 @@ $card-half: 350px;
   }
   
   body {
-    background-color: #f4f4f4;
-    overflow-x: hidden;
+    // background-color: #f4f4f4;
+    // overflow-x: hidden;
   }
   
   .card-container {
@@ -64,6 +70,7 @@ $card-half: 350px;
   
   .schwabLogo, .q2Logo {
     padding-top: 10px;
+    padding-bottom: 10px;
   }
   
   .q2Logo img {
@@ -120,22 +127,22 @@ $card-half: 350px;
   
   #card-1 {
     left: calc(50vw - $card-half);
-    transition: 1s;
+    transition: 2s;
   }
   
   #card-2 {
-    left: 1000px;
-    transition: 1s;
+    left: 100vw;
+    transition: 2s;
   }
   
   #card-3 {
     left: 1850px;
-    transition: 1s;
+    transition: 2s;
   }
   
   #card-4 {
     left: 2700px;
-    transition: 1s;
+    transition: 2s;
   }
   
   .move-to-center {
@@ -188,6 +195,9 @@ $card-half: 350px;
   .work-container {
     display: flex;
     justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15px;
   }
   
   .rightButton, .leftButton {
@@ -196,11 +206,11 @@ $card-half: 350px;
   }
   
   .rightButton {
-    margin-left: 375px;
+    margin-left: 20px;
   }
   
   .leftButton {
-    margin-right: 375px;
+    margin-right: 20px;
   }
   
   .MuiFab-primary {
@@ -225,6 +235,9 @@ $card-half: 350px;
   
   .chipSection {
     margin-top: 8px;
+    margin-left: 25px;
+    margin-right: 25px;
+    
   }
   
   .MuiTypography-h6 {
