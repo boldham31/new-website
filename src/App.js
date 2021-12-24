@@ -27,11 +27,11 @@ function App() {
       description: "Lead front-end developer on a multi-million dollar software implementation for a government agency. Responsible for application UI/UX design and managing four offshore development teams."
     },
     {
-      companyName: "Texas Conference of Urban Counties",
-      role: "Front End Developer",
-      technologies: ["Angular 4", "Node.js", "Angular Material", "JavaScript (TypeScript)", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
-      logo: "./cuc-logo.jpg",
-      description: "Lead front-end developer on a multi-million dollar software implementation for a government agency. Responsible for application UI/UX design and managing four offshore development teams."
+      companyName: "General Motors",
+      role: "Full-Stack & Mobile Developer",
+      technologies: ["Angular 5, 6, 7 and 8", "Node.js", "React Native (iOS/Android)", "NativeScript (iOS/Android", "Agile Scrum", "Automated Unit Testing w/Karma, Jasmine", "Jenkins CI"],
+      logo: "./gm_logo.png",
+      description: "Mobile & Full-Stack developer on a Maven team project delivering Native POC implementations of existing Angular applications within the product suite."
     },
     {
       companyName: "Texas Conference of Urban Counties",
