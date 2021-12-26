@@ -4,11 +4,13 @@ import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
 import Fab from '@material-ui/core/Fab';
 import Chip from '@material-ui/core/Chip';
+import AddIcon from '@mui/icons-material/Add';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Divider from '@material-ui/core/Divider';
 import Carousel from 'react-material-ui-carousel';
 import { Paper, Button } from '@mui/material';
+import { SocialIcon } from 'react-social-icons';
 
 function App() {
   var items = [
@@ -67,7 +69,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Typography variant="h4" component="h2">BRYCE OLDHAM</Typography>
-        <Typography variant="h6" component="h4">Software Architect | Technical Consultant</Typography>
+        <Typography variant="h6" class="role" component="h4">Software Architect | Technical Consultant</Typography>
       </header>
       <div className="image-container">
           {/* <div className="leftButton">
@@ -81,6 +83,12 @@ function App() {
               <ChevronRightIcon />
             </Fab>
           </div> */}
+      </div>
+      <div className="social-container">
+        <SocialIcon fgColor="white" url="https://twitter.com/mettaworldbryce" />
+        <SocialIcon fgColor="white" url="https://linkedin.com/in/bryceoldham" />
+        <SocialIcon fgColor="white" url="https://instagram.com/texas_oldham" />
+        <SocialIcon fgColor="white" url="https://github.com/boldham31" />
       </div>
       <div className="work-container">
         <Carousel 
